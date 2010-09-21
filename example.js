@@ -3,9 +3,8 @@
  * Module dependencies.
  */
 
-var Log = require('./lib/log');
-
-var log = new Log(Log.INFO);
+var Log = require('./lib/log')
+  , log = new Log(Log.INFO);
 
 log.debug('preparing email');
 log.info('sending email');
