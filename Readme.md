@@ -5,7 +5,7 @@
 
 ## Installation
 
-  $ npm install log
+    $ npm install log
 
 ## Example
 
