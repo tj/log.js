@@ -34,5 +34,5 @@ Specifying a specific stream:
   - 3 __ERROR__ error condition
   - 4 __WARNING__ warning condition
   - 5 __NOTICE__ a normal but significant condition
-  - 6 __NOTICE__ a purely informational message
+  - 6 __INFO__ a purely informational message
   - 7 __DEBUG__ messages to debug an application
