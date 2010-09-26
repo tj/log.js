@@ -1,8 +1,8 @@
-[Sun, 26 Sep 2010 01:10:23 GMT] DEBUG a debug message
-[Sun, 26 Sep 2010 01:10:23 GMT] INFO a info message
-[Sun, 26 Sep 2010 01:10:23 GMT] NOTICE a notice message
-[Sun, 26 Sep 2010 01:10:23 GMT] WARNING a warning message
-[Sun, 26 Sep 2010 01:10:23 GMT] ERROR a error message
-[Sun, 26 Sep 2010 01:10:23 GMT] CRITICAL a critical message
-[Sun, 26 Sep 2010 01:10:23 GMT] ALERT a alert message
-[Sun, 26 Sep 2010 01:10:23 GMT] EMERGENCY a emergency message
+[Sun, 26 Sep 2010 01:26:14 GMT] DEBUG a debug message
+[Sun, 26 Sep 2010 01:26:14 GMT] INFO a info message
+[Sun, 26 Sep 2010 01:26:14 GMT] NOTICE a notice message
+[Sun, 26 Sep 2010 01:26:14 GMT] WARNING a warning message
+[Sun, 26 Sep 2010 01:26:14 GMT] ERROR a error message
+[Sun, 26 Sep 2010 01:26:14 GMT] CRITICAL a critical message
+[Sun, 26 Sep 2010 01:26:14 GMT] ALERT a alert message
+[Sun, 26 Sep 2010 01:26:14 GMT] EMERGENCY a emergency message
