@@ -5,7 +5,7 @@
 
 var Log = require('../lib/log')
   , fs = require('fs')
-  , stream = fs.createWriteStream(__dirname + '/file.log')
+  , stream = fs.createWriteStream(__dirname + '/file.log', { flags: 'a' })
   , log = new Log('debug', stream);
 
 log.debug('a debug message');
