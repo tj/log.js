@@ -4,7 +4,9 @@
  */
 
 var Log = require('../lib/log')
-  , log = new Log('notice');
+  , fs = require('fs')
+  , stream = fs.createWriteStream(__dirname + '/file.log')
+  , log = new Log('debug', stream);
 
 log.debug('a debug message');
 log.info('a info message');
