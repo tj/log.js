@@ -4,7 +4,7 @@
  */
 
 var Log = require('./lib/log')
-  , log = new Log(Log.INFO);
+  , log = new Log('notice');
 
 log.debug('a debug message');
 log.info('a info message');
