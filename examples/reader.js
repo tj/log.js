@@ -10,4 +10,6 @@ var Log = require('../lib/log')
 
 log.on('line', function(line){
   console.log(line);
-});
+}).on('end', function(){
+  console.log('done');
+});;
