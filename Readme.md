@@ -30,6 +30,10 @@ Instead of the log level constants, you may also supply a string:
     var Log = require('log')
       , log = new Log('warning');
 
+ We can also use `%s` much like `console.log()` to pass arguments:
+ 
+     log.error('oh no, failed to send mail to %s.', user.email);
+
 ## Reader
 
  To stream a log, simply pass a readable stream instead of a writable:

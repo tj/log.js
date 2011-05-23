@@ -13,4 +13,5 @@ log.warning('a warning message');
 log.error('a error message');
 log.critical('a critical message');
 log.alert('a alert message');
-log.emergency('a emergency message');
+log.emergency('a emergency %s', 'message');
+log.emergency('a really %s emergency %s', 'bad', 'message');
