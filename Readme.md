@@ -10,10 +10,10 @@
 
 ## Example
 
-Log level defaults to __DEBUG__ however here we specify __INFO__, and the stream defaults to _stdout_:
+Log level defaults to __DEBUG__ however here we specify __info__, and the stream defaults to _stdout_:
 
     var Log = require('log')
-      , log = new Log(Log.INFO);
+      , log = new Log('info');
 
     log.debug('preparing email');
     log.info('sending email');
@@ -23,7 +23,7 @@ Specifying a specific stream:
 
     var fs = require('fs')
       , Log = require('log')
-      , log = new Log(Log.DEBUG, fs.createWriteStream('my.log'));
+      , log = new Log('debug', fs.createWriteStream('my.log'));
 
 Instead of the log level constants, you may also supply a string:
 
