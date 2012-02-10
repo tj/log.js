@@ -1,4 +1,9 @@
 
+1.3.0 / 2012-02-10 
+==================
+
+  * Changed to use local time zone instead of GMT [thakkar-rushikesh]
+
 1.2.0 / 2011-05-23 
 ==================
 
