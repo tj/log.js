@@ -47,7 +47,7 @@ Instead of the log level constants, you may also supply a string:
       console.log(line);
     });
 
- __Note: log.js asumes utf8 encoded data.__ 
+ __Note: log.js assumes utf8 encoded data.__ 
 Example stdout:
 
     { date: Sun, 26 Sep 2010 01:26:14 GMT
