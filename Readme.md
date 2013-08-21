@@ -1,78 +1,96 @@
-
 # Log.js
 
- Light-weight logging for [NodeJS](http://nodejs.org), including a 
- streaming log reader.
+Lightweight logging for [NodeJS](http://nodejs.org). Includes a streaming log reader.
+
 
 ## Installation
 
-    $ npm install log
+```bash
+$ npm install log
+```
+
 
 ## Example
 
-Log level defaults to __DEBUG__ however here we specify __info__, and the stream defaults to _stdout_:
+By default, a Log’s stream is `stdout`, and its log level defaults is `DEBUG`. 
 
-    var Log = require('log')
-      , log = new Log('info');
+Instead of `DEBUG`,  let’s create a log with the `info` level:
 
-    log.debug('preparing email');
-    log.info('sending email');
-    log.error('failed to send email');
+```javascript
+var Log = require('log')
+  , log = new Log('info');
+
+log.debug('preparing email');
+log.info('sending email');
+log.error('failed to send email');
+```
 
 Specifying a specific stream:
 
-    var fs = require('fs')
-      , Log = require('log')
-      , log = new Log('debug', fs.createWriteStream('my.log'));
+```javascript
+var fs = require('fs')
+ , Log = require('log')
+ , log = new Log('debug', fs.createWriteStream('my.log'));
+```
 
-Instead of the log level constants, you may also supply a string:
+Instead of the log level constants, you can just supply a string:
 
-    var Log = require('log')
-      , log = new Log('warning');
-
- We can also use `%s` much like `console.log()` to pass arguments:
+```javascript
+var Log = require('log')
+  , log = new Log('warning');
+```
  
-     log.error('oh no, failed to send mail to %s.', user.email);
+You can use `%s` to pass arguments (much like `console.log()`):
+ 
+```javascript
+log.error('oh no, failed to send mail to %s.', user.email);
+```
+
 
 ## Reader
 
- To stream a log, simply pass a readable stream instead of a writable:
+To stream a log, simply pass a readable stream instead of a writable:
 
-    var Log = require('log')
-      , fs = require('fs')
-      , stream = fs.createReadStream(__dirname + '/file.log')
-      , log = new Log('debug', stream);
-   
-    log.on('line', function(line){
-      console.log(line);
-    });
+```javascript
+var Log    = require('log')
+  , fs     = require('fs')
+  , stream = fs.createReadStream(__dirname + '/file.log')
+  , log    = new Log('debug', stream);
 
- __Note: log.js assumes utf8 encoded data.__ 
-Example stdout:
+log.on('line', function(line){
+  console.log(line);
+});
+```
 
-    { date: Sun, 26 Sep 2010 01:26:14 GMT
-    , level: 1
-    , levelString: 'ALERT'
-    , msg: 'a alert message'
-    }
-    { date: Sun, 26 Sep 2010 01:26:14 GMT
-    , level: 0
-    , levelString: 'EMERGENCY'
-    , msg: 'a emergency message'
-    }
+(**Note:** `log.js` assumes utf8 encoded data.)
 
+Example output:
+
+```javascript
+{ date: Sun, 26 Sep 2010 01:26:14 GMT
+, level: 1
+, levelString: 'ALERT'
+, msg: 'a alert message'
+}
+{ date: Sun, 26 Sep 2010 01:26:14 GMT
+, level: 0
+, levelString: 'EMERGENCY'
+, msg: 'a emergency message'
+}
+```
+    
 ## Log Levels
 
  Mirror that of syslog:
  
-  - 0 __EMERGENCY__  system is unusable
-  - 1 __ALERT__ action must be taken immediately
-  - 2 __CRITICAL__ the system is in critical condition
-  - 3 __ERROR__ error condition
-  - 4 __WARNING__ warning condition
-  - 5 __NOTICE__ a normal but significant condition
-  - 6 __INFO__ a purely informational message
-  - 7 __DEBUG__ messages to debug an application
+  - `0` `EMERGENCY`   system unusable
+  - `1` `ALERT`       immediate action required
+  - `2` `CRITICAL`    condition critical
+  - `3` `ERROR`       condition error
+  - `4` `WARNING`     condition warning
+  - `5` `NOTICE`      condition normal, but significant 
+  - `6` `INFO`        a purely informational message
+  - `7` `DEBUG`       debugging information
 
 ## License 
 
