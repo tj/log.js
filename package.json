@@ -2,6 +2,7 @@
   "name": "log",
   "description": "Tiny logger with streaming reader",
   "version": "1.4.0",
+  "license": "MIT",
   "author": "TJ Holowaychuk <tj@vision-media.ca>",
   "keywords": [
     "log",
